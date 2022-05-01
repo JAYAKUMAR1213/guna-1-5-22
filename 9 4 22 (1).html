@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *
+    {
+       font-size: 30px;
+    }
+    li{
+    display: block;
+    }
+</style>
+<body>
+   
+    <input type="text" id="val">
+    <button type="button" style="background-color: rgb(167, 217, 41);" value="get value" id="add" onclick="clickme()"> click</button>
+    <ul id="main-block">
+
+    </ul>
+<script>
+   var app=[];    
+        
+function clickme(){
+   
+    
+    var name=document.getElementById("val").value
+   // var num=document.getElementById("val").value
+    if (name.trim() != '')
+{
+    if (app.indexOf(name)==-1)
+    {
+        app.push(name);
+    var list=document.createElement("li")
+    var text=document.createTextNode(name)
+    var name2=document.getElementById("main-block")
+    name2.appendChild(list)
+    list.appendChild(text)
+    document.getElementById('val').value = '' 
+    }        
+         else
+         {
+             alert("duplicate value");
+             document.getElementById('val').value = '' 
+         }
+        }
+        else
+        {
+            alert("enter the value")
+        }
+} 
+</script>
+</body>
+</html>

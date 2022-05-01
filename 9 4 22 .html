@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>9 4 22</title>
+    <script
+      src="https://kit.fontawesome.com/dfecdf67e9.js"
+      crossorigin="anonymous"
+    ></script>
+    <style>
+      .main {
+        display: flex;
+        gap: 9px;
+      }
+      body {
+        display: grid;
+        place-items: center;
+        height: 100vh;
+      }
+      div i{
+        color: gray;
+        font-size: 180px;
+      }
+      .on {
+        color: rgb(15, 243, 140);
+        font-size: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div ><i id="star1" onclick="clicked(1)" class="fa-solid fa-star star1 "></i></div>
+      <div ><i id="star2" onclick="clicked(2)" class="fa-solid fa-star star2 "></i></div>
+      <div ><i id="star3" onclick="clicked(3)" class="fa-solid fa-star star3 "></i></div>
+      <div ><i id="star4" onclick="clicked(4)" class="fa-solid fa-star star4 "></i></div>
+      <div ><i id="star5" onclick="clicked(5)" class="fa-solid fa-star star5 "></i></div>
+    </div>
+
+    <script>
+  
+
+      function clicked(num)
+      {
+        
+            var sel=document.getElementsByClassName("on")
+            if(sel.length!=0){
+                <sel class="classList add"></sel>
+                htm ("on")
+            }
+            for (let i = 1; i <= num; i++) {
+                var ele=document.getElementsByClassName("star"+i)
+                ele.className="on"
+            }
+            

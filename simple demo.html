@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simple demo</title>
+    <style>
+     div
+    {
+        color: green;
+        font-size: 100px;
+        display: inline-block;
+    }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    
+    <div class="check" onclick="newname()">&#x2606;</div>
+    <div class="check1" onclick="newname1()">&#x2606;</div>
+    <div class="third" onclick="third1()">&#x2606;</div>
+    <div class="check3" onclick="newname3()">&#x2606;</div>
+    <div class="check4" onclick="newname4()">&#x2606;</div>
+    <script>
+        var check=true.,one;
+        var newname=function()
+        {
+            var one =  newname4()
+            var two =   newname3()
+            var three = newname1()
+            var four = third1()
+        if(check == true)
+        {
+            var ele =document.getElementsByClassName("check")[0];
+            ele.innerHTML="&#x2605;"
+            ele.classList.add = ("new");
+            check=false;
+        }
+        else
+        {
+            var ele =document.getElementsByClassName("check")[0];
+            ele.innerHTML="&#x2606;"
+            ele.classList.remove = ("new");
+            check=true;
+            //
+            var ele1 =document.getElementsByClassName("check1")[0];
+            ele1.innerHTML="&#x2606;"
+            ele1.classList.remove = ("new");
+            check1=true;
+            //
+
+            var ele2 =document.getElementsByClassName("third")[0];
+            ele2.innerHTML="&#x2606;"
+            ele2.classList.remove = ("new");
+            third=true;
+           //
+           var ele3 =document.getElementsByClassName("check4")[0];
+            ele3.innerHTML="&#x2606;"
+            ele3.classList.remove = ("new");
+            not=true;
+        }
+    }
+    //second program
+    
+    var check1=true;
+        var newname1=function()
+        {
+            var second = newname()
+        if(check1 == true)
+        {
+            var ele1 =document.getElementsByClassName("check1")[0];
+            ele1.innerHTML="&#x2605;"
+            ele1.classList.add = ("new");
+          
+            check1=false;
+        }
+        else
+        {
+            var ele1 =document.getElementsByClassName("check1")[0];
+            ele1.innerHTML="&#x2606;"
+            ele1.classList.remove = ("new");
+            check1=true;
+        }
+         return newname1;
+    }
+     //third program
+     var third2;
+
+    var third=true;
+        var third1=function()
+        {
+         third2 = newname1()   
+              
+        if(third == true)
+        {
+            var ele2 =document.getElementsByClassName("third")[0];
+            ele2.innerHTML="&#x2605;"
+            ele2.classList.add = ("new");
+            third=false;
+        }
+        else
+        {
+            var ele2 =document.getElementsByClassName("third")[0];
+            ele2.innerHTML="&#x2606;"
+            ele2.classList.remove = ("new");
+            third=true;
+        }
+       // second()
+    
+    }
+
+    //fourth program
+    var non =true;
+    var normal;
+
+        var newname3=function()
+        {
+            var normal =   third1() 
+
+        if ( non == true)
+        {
+            var ele3 =document.getElementsByClassName("check3")[0];
+            ele3.innerHTML="&#x2605;"
+            ele3.classList.add = ("new");
+            non=false;
+        }
+        else
+        {
+            var ele3 =document.getElementsByClassName("check3")[0];
+            ele3.innerHTML="&#x2606;"
+            ele3.classList.remove = ("new");
+            non=true;
+        }
+    }
+ //fifth program
+ var normal1;
+ var not =true;
+        var newname4=function()
+        {
+            normal1 =  newname3() 
+        if(not == true)
+        {
+            var ele3 =document.getElementsByClassName("check4")[0];
+            ele3.innerHTML="&#x2605;"
+            ele3.classList.add = ("new");
+            not=false;
+        }
+        else
+        {
+            var ele3 =document.getElementsByClassName("check4")[0];
+            ele3.innerHTML="&#x2606;"
+            ele3.classList.remove = ("new");
+            not=true;
+        }
+    }
+ 
+    </script>
+</body>
+</html>

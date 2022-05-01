@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+    
+      <!-- BOOTSTRAP LINK -->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+     
+    <style>
+        body
+        {
+            background-image: url('../img/24ee714df94245ce4a94e39f1061b24a.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 150%;
+        }
+          h3
+         {
+               text-align: center;
+          }
+         div
+         {
+             border: 20px solid #07395c42;
+             border-radius: 50px;
+             margin: auto;
+             margin-top: 100px;
+             background-color: #0000005e;
+             width: 350px;
+             height: 400px;
+            
+         }
+         h3
+         {
+            color: #0873e7;
+         }
+         input
+         {
+             transform: translate(0px, 30px); 
+            color: #4bed05;
+             font-size: 20px;
+             border-radius: 20px;
+             background-color: #020c153d;
+         }
+         #value2
+         {
+            transform: translate(0px, 90px);
+         }
+         button
+         {
+             transform: translate(130px,130px);
+             color: #fff500b5;
+             background-color: #094267;
+             font-size: 23px;
+             border: 3px solid #000d16;
+             border-radius: 20px; 
+             opacity: 0.5; 
+         }
+         button:hover
+         {
+             opacity: 1;
+         }
+        /* ============================= */
+         
+        .la{
+            padding: 20px;
+            font-size: 22px;
+        }
+        #demo 
+        { 
+         color: #2121ea;
+         font-size: 30px;
+         text-align: center;
+        }
+    </style>
+</head>
+       <div>
+           <br>
+        <h3>User Profile</h3>
+        <center><input type="text" name="text" class="text-center" id="value1"></center>
+        <center><input type="text"    class="text-center"  name="password" id="value2"></center>
+        <button id="button1">submit</button>
+       </div>
+    
+
+<script>
+   
+    var akp = 
+    [
+        {
+            username : 'arun',
+            password : '12345'
+        },
+        {
+            username : 'kumar',
+            password : 'arun'
+        },
+        {
+            username : 'jaya',
+            password : 'kumar'
+        },
+        {
+            username : 'jay',
+            password : 'raj'
+        }
+    ]
+        var val1 = document.getElementById("value1");
+       var val2 = document.getElementById("value2");
+       var val3 = document.getElementById("button1");
+
+       //===================   click  ====================
+       
+
+    val3.addEventListener('click',function(event)
+       {
+          if(val1.value != "" && val2.value != "")
+                  {
+                      if(akp.indexOf(value1.value) == -1 && akp.indexOf(value2.value) == -1 )
+                      {
+
+                        for(i=0;i<akp.length;i++)
+                     {
+                          
+                  if(akp[i].username == val1.value && akp[i].password == val2.value)
+                  {
+                       
+                      location.href = "file:///F:/classa/classb/front_end/html/22%204%2022%20demo2.html";
+                         
+                    } 
+                
+                     }
+                      }
+                      else
+                      {
+                          alert("incorrect value");
+                      }
+                      
+                    
+                }
+                else
+                {
+                   
+                  // var ds = document.getElementById("demo").innerHTML = "Enter the value fully";
+                    alert("Enter the value fully");
+                  }
+                
+  
+       })
+
+
+       
+
+
+    //========== LOCAL STORAGE ==========
+    localStorage.clear();
+      var c = JSON. stringify(akp);
+      localStorage.setItem("username",c);
+      setTimeout(function myGreeting() {
+
+  var d = JSON.stringify(val1.value);
+      //console.log(d);
+      localStorage.setItem("users",d);
+}, 5000);
+    
+      //===============\\
+      
+</script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+  
+</body>
+</html>

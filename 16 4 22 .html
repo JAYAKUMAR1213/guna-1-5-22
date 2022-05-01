@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D</title>
+</head>
+<body>
+    <input type="text" name="" id="value1">
+    <input type="text" name="" id="value2">
+   <input type="button" value="click" id="button1">
+
+
+<script>
+    var akp = 
+    {
+        un1 : "arun",
+        un2 : "kumaresan"
+    };
+     
+    
+
+       var val1 = document.getElementById("value1");
+       var val2 = document.getElementById("value2");
+       var val3 = document.getElementById("button1");
+
+       // =============== first =====================
+
+
+       val1.addEventListener('keypress',function(event)
+       {
+           if(event.key == "Enter")
+           {
+            if(val1.value != "")
+                  {
+                     
+                  if(akp.un1 == val1.value)
+                  { 
+                      alert("correct");
+                  } 
+                  else if((val1.value).length < 3 )
+                  {
+                       alert("small input");
+                  }
+                  else
+                  {
+                    alert("incorrect")
+                  }
+                }
+                else
+                {
+                    alert("Enter the value")
+                }
+                  b
+           }
+          
+              })
+
+       val3.addEventListener('click',function(event)
+       {
+           //if(event.key == "click")
+          // console.log(val1.value);
+          
+          if(val1.value != "")
+                  {
+                     
+                  if(akp.un1 == val1.value)
+                  {
+                      console.log("correct");
+                  } 
+                  else if((val1.value).length < 3 )
+                  {
+                       console.log("small input");
+                  }
+                  else
+                  {
+                    console.log("incorrect");
+                  }
+                }
+                else
+                {
+                    console.log("Enter the value");
+                }
+                
+                   //================ 11
+           
+  
+       })
+
+             //===============  second ===================
+
+
+       val2.addEventListener('keypress',function(event)
+       {
+        if(event.key == "Enter")
+           {
+            if(val2.value != "")
+                  {
+                     
+                  if(akp.un2 == val2.value)
+                  {
+                      alert("correct");
+                  } 
+                  else if((val2.value).length < 3 )
+                  {
+                       alert("small input");
+                  }
+                  else
+                  {
+                    alert("incorrect")
+                  }
+                }
+                else
+                {
+                    alert("Enter the value")
+                }
+                  //================ 11
+           }
+       })
+
+       val3.addEventListener('click',function(event)
+       {
+       
+
+        if(val2.value != "")
+                  {
+                     
+                  if(akp.un2 == val2.value)
+                  {
+                      console.log("correct");
+                  } 
+                  else if((val2.value).length < 3 )
+                  {
+                       console.log("small input");
+                  }
+                  else
+                  {
+                    console.log("incorrect");
+                  }
+                }
+                else
+                {
+                    console.log("Enter the value");
+                }         
+  
+       })
+</script>
+
+</body>
+</html>

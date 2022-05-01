@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16 4 22</title>
+
+    <!-- ========= BOOTSTRAP LINK ============= -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+<style>
+         body
+         {
+              font-family: fantasy; 
+         }
+         .main-content
+         {
+             position: flex;
+             flex-wrap: wrap;
+         }
+         input
+         {
+             width: 60px;
+             margin: 20px;  
+         }
+         input:focus
+         {
+             color: #74ad93;
+             background-color: #1212ba;
+         }
+         header,footer
+         {
+             width: 310px;
+             margin: auto;
+         }
+         video
+         {
+             width: 1000px;
+             position: relative;
+         }
+         .content
+         { 
+             position: absolute;
+             color: yellow;
+             top: 160px;
+             right: 50%;
+             left: 40%;
+         }
+         button
+         {
+             margin-left: 130px;
+             margin-top: 40px;
+         }
+</style>
+</head>
+<body>
+        <div class="main-content">
+<br><br> 
+         <center>
+             <video autoplay muted loop>
+             <source src="../img/Pexels Videos 2491284.mp4" type="video/mp4">
+             </video>
+        </center>
+         <!-- ======== FROM DAY ========== -->
+         <div class="content">
+         <header>
+             <center><h1>FROM DAY</h1></center>
+                 <input type="text" name="" id="year-from" placeholder="year">
+                 <input type="text" name="" id="month-from" placeholder="month">
+             <input type="text" name="" id="day-from" placeholder="day">
+         </header>
+
+         <!-- ========= TO DAY ========== -->
+
+         <footer>
+             <center><h1>TO DAY</h1></center>
+                 <input type="text" name="" id="year-to" placeholder="year">
+                 <input type="text" name="" id="month-to" placeholder="month">
+             <input type="text" name="" id="day-to" placeholder="day">
+         </footer>
+         <!-- ====== BUTTON ======= -->
+
+         <button class="btn btn-outline-light" onclick="search_day()">click</button>   
+            <center><div id  ="demo"></div></center><br><br><br>
+         </div>
+         </div>
+ <!-- ============= SCRIPT VIEW ============= -->
+<script>
+    
+         //======= new array declaration
+
+         var jion_day = [];
+    
+         // ==========  function declaration
+    
+         function search_day()
+         {
+         // if (year_from != "" && year_to != "")
+         // {
+             var year_from = new Date(document.getElementById("year-from").value,((document.getElementById("month-from").value)-1),document.getElementById("day-from").value);
+        
+             var year_to = new Date(document.getElementById("year-to").value,((document.getElementById("month-to").value)-1),document.getElementById("day-to").value);
+        
+        
+             alert("Starting Date this: "+year_from.toDateString()+"  Ending Date this: "+year_to.toDateString());
+
+             // =============== for loop
+ 
+
+             var data =  new Date(year_to.setDate(year_to.getDate() -1 ))
+
+             for( var i=0;year_from<data;i++)
+             {
+                 jion_day.push(new Date(year_from.setDate(year_from.getDate() +1 )).toDateString());
+             }
+                 //console.log(jion_day.join('\n'));
+                 alert(jion_day);
+
+              // document.getElementById("demo").innerHTML = jion_day;
+             }
+            
+</script>
+
+<!-- ============= BOOTSTRAP LINK ============= -->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

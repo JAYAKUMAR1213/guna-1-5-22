@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>accordian</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <p>
+        <a class="btn btn-info" data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+        arun
+        </a>
+        <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+          kumaresan
+        </button>
+      </p>
+      <div class="collapse" id="collapseExample">
+        <div class="card card-body">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus illum quod enim optio. Possimus unde reiciendis accusamus commodi explicabo, mollitia deleniti quis voluptatibus ex minus dignissimos modi aliquid sunt architecto!
+        </div>
+        <!-- new collapse used -->
+        <a class="btn btn-warning" data-toggle="collapse" href="#collapseExample1" aria-expanded="false" aria-controls="collapseExample">
+            guna
+        </a>
+        <button class="btn btn-success" type="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample">
+            jeeva
+        </button>
+        <div class="collapse" id="collapseExample1">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione repellat quas iste eius odit cum voluptatibus sed? Earum, ratione. Aliquam voluptatum necessitatibus cum libero inventore, obcaecati aperiam sapiente odit Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui inventore veritatis omnis, magni illo quod. Quos quisquam quae dolorem amet laborum dolor praesentium asperiores velit, culpa consequuntur omnis, nobis cupiditate?
+        </div>
+        <div class="collapse" id="collapseExample2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores magnam vero blanditiis aperiam, placeat ea repellat voluptate dolor. Necessitatibus, at. Pariatur, provident eum. Distinctio suscipit quaerat modi odit tenetur numquam.
+        </div>
+        <p>
+            <a class="btn btn-success" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">show1</a>
+            <button class="btn btn-warning" type="button" data-toggle="collapse" data-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">show2</button>
+            <button class="btn btn-danger" type="button" data-toggle="collapse" data-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">show3</button>
+          </p>
+          <div class="row">
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample1">
+                <div class="card card-head text-center">row1 col2</div>
+                <div class="card card-body text-center">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamea proident.
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="collapse multi-collapse" id="multiCollapseExample2">
+                  <div class="card card-head text-center">row1 col2</div>
+                <div class="card card-body text-center">
+                  Anim pariatur cliche reprehenderit, enim n cred nesciunt sapiente ea proident.
+                </div>
+                <div class="card card-footer text-center">end fo the paragraph</div>
+              </div>
+            </div>
+       
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+      </div>
+</body>
+</html>

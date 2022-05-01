@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23 4 22(1)</title>
+</head>
+<body>
+    <script>
+        //ES6 fetures
+        //const,let,arrow function,promise,
+        //const only one time used so, not used another time 
+        const arun = function()
+        {
+            var a,b=10;
+            console.log(a+b);
+        }
+        // const arun = function()
+        // {
+        //     var a,b=10;
+        //     console.log(a-b);
+        // }
+
+        //let is block scope
+        function akp()
+        {
+            let a,b,c = 70
+            console.log(a,c,b);
+        }
+    //     //================ map function ============
+    //     function func() {
+    //   var arr = [2, 56, 78, 34, 65]
+    //    var new_arr = arr.map(function (num) {
+    //    return num / 2;  
+    //    });
+    //    document.write(new_arr);}
+    //   func();
+    var ar = [2, 56, 78, 34, 65]
+         var sum = () => {   
+        var new_ar = ar.map(function (num) {
+        return num / 2;  
+        });
+        document.writeln(new_ar);
+    }
+sum();
+   
+document.write("</br>");
+
+// var guna = {
+//     id : 3456789,
+//     name : 'akp',
+//      sum : () =>
+//     {
+//         document.writeln(this.id);
+//     }
+     
+// };
+// guna.sum();
+
+// ===============
+// let user = {
+//   name: "John",
+//   age: 30,
+
+  
+//      info:function()
+//    {
+    
+//     document.writeln(this.name);
+//   }
+
+// };
+
+// user.info(); 
+    
+// ===============
+// let user = {
+//   name: "John",
+//   age: 30,
+
+  
+//      info:() =>
+//    {
+//     alert(this.name);
+//   }
+
+// };
+
+// user.info(); 
+var chopper = {
+    owner: 'zed',
+
+    getOwner: function () 
+    {
+         var x = ()=>
+           {
+            console.log(this.owner);
+           }
+           x();
+    }
+};
+
+chopper.getOwner();
+    
+         
+
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D3</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+        integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #53d9f6;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .card {
+            width: 222px;
+            display: inline-block;
+        }
+
+        .main-content {
+            background-color: #00bcd452;
+            width: 840px;
+            height: 740px;
+            margin: auto;
+        }
+
+        .main-content div {
+            background-color: #9746d2;
+            margin: 22px;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-content0">
+        <h1 class="text-center">LOCALSTORAGE DATA</h1>
+        <div class="card">
+            <div class="card-header">FIRST INFORMATION</div>
+            <ul id="main-block1" class="card-body"></ul>
+        </div>
+
+        <div class="card">
+            <div class="card-header">SECOND INFORMATION</div>
+            <ul id="main-block2" class="card-body"></ul>
+        </div>
+        <div class="card">
+            <div class="card-header">THIRD INFORMATION</div>
+            <ul id="main-block3" class="card-body"></ul>
+        </div>
+        <div class="card">
+            <div class="card-header">FOURTH INFORMATION</div>
+            <ul id="main-block4" class="card-body"></ul>
+        </div>
+        <div class="card">
+            <div class="card-header">FIFTH INFORMATION</div>
+            <ul id="main-block5" class="card-body"></ul>
+        </div>
+        <div class="card">
+            <div class="card-header">SIXTH INFORMATION</div>
+            <ul id="main-block6" class="card-body"></ul>
+        </div>
+    </div>
+
+    <script>
+        var nextpage = localStorage.getItem("nextpage");
+        var nextpage1 = JSON.parse(nextpage);
+        //var ll = nextpage1.length;
+        var val1 = nextpage1.length;
+
+        nextpage1.map((item, i) => {
+            thirdPage(item, i);
+        })
+        function thirdPage(itemData, i) {
+            //if (s != "" && s != undefined) {
+                for (let key in itemData) {
+                    var list = document.createElement("li")
+                    var text = document.createTextNode(itemData[key])
+                    var name2 = document.getElementById('main-block' + (i+1));
+                    name2.appendChild(list)
+                    list.appendChild(text)
+
+                }
+            }
+
+        //}
+            // for (i = 0; i < 7; i++) {
+            //     var na = nextpage1[i];
+            //     if (i <= val1) {
+            //         for (j = 1; j < 8; j++) {
+            //             var s = na[j];
+            //             if (s != "" && s != undefined) {
+            //                 var list = document.createElement("li")
+            //                 var text = document.createTextNode(s)
+            //                 var name2 = document.getElementById("main-block" + i)
+            //                 name2.appendChild(list)
+            //                 list.appendChild(text)
+            //             }
+            //         }
+            //     }
+            // }
+        
+//        //=========================================
+//        for(i=0;i<7;i++)
+//   {
+//       var na = nextpage1[i];
+//       if (i == 0) {
+//           for(j=1;j<8;j++)
+//   {
+//       var s = na[j];
+//      if(s != "" && s!= undefined){
+//           var list=document.createElement("li")
+//   var text=document.createTextNode(s)
+//   var name2=document.getElementById("main-block1")
+//   name2.appendChild(list)
+//   list.appendChild(text)
+//      }
+//       }
+//    }
+//    //========== 2 =======
+//    if (i == 1) {
+//           for(j=1;j<8;j++)
+//   {
+//       var s = na[j];
+//      if(s != "" && s!= undefined){
+//           var list=document.createElement("li")
+//   var text=document.createTextNode(s)
+//   var name2=document.getElementById("main-block2")
+//   name2.appendChild(list)
+//   list.appendChild(text)
+//      }
+//       }
+//    }
+//     //========== 3 =======
+//     if (i == 2) {
+//           for(j=1;j<8;j++)
+//   {
+//       var s = na[j];
+//      if(s != "" && s!= undefined){
+//           var list=document.createElement("li")
+//   var text=document.createTextNode(s)
+//   var name2=document.getElementById("main-block3")
+//   name2.appendChild(list)
+//   list.appendChild(text)
+//      }
+//       }
+//    }
+//     //========== 4 =======
+//     if (i == 3) {
+//           for(j=1;j<8;j++)
+//   {
+//       var s = na[j];
+//      if(s != "" && s!= undefined){
+//           var list=document.createElement("li")
+//   var text=document.createTextNode(s)
+//   var name2=document.getElementById("main-block4")
+//   name2.appendChild(list)
+//   list.appendChild(text)
+//      }
+//       }
+//    }
+//     //========== 5 =======
+//     if (i == 4) {
+//           for(j=1;j<8;j++)
+//   {
+//       var s = na[j];
+//      if(s != "" && s!= undefined){
+//           var list=document.createElement("li")
+//   var text=document.createTextNode(s)
+//   var name2=document.getElementById("main-block5")
+//   name2.appendChild(list)
+//   list.appendChild(text)
+//      }
+//       }
+//    }
+//    //========== 6 =======
+//    if (i == 5) {
+//           for(j=1;j<8;j++)
+//   {
+//       var s = na[j];
+//      if(s != "" && s!= undefined){
+//           var list=document.createElement("li")
+//   var text=document.createTextNode(s)
+//   var name2=document.getElementById("main-block6")
+//   name2.appendChild(list)
+//   list.appendChild(text)
+//      }
+//       }
+//    }
+
+// }
+    </script>
+</body>
+
+</html>

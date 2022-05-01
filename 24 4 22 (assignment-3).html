@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24 4 22 (assignment-3)</title>
+    <style>
+        *
+        {
+            color: #0400ff;
+            font-size: 30px;
+             text-align: center;
+             margin-top:100px;
+             background-color: yellow;
+        }
+        body
+        {
+            background-color: #31bc06;
+        }
+      .demo
+      {
+          color: rgb(11 28 24);
+      }
+    </style>
+</head>
+<body>
+    <div class="demo">PERSONAL DETAILS</div>
+     <script>
+         
+         var m = localStorage.getItem("secondpage");
+         var g = JSON.parse(m);
+         //console.log(g);
+
+        // for(i=0;i<g.length;i++)
+        // {
+        
+        //     document.write(g[i]+"</br>");
+        // }
+
+
+
+        //=============
+        function func() {
+
+//var arr = [2, 56, 78, 34, 65];//existing array
+// new mapped array
+
+g.map(function(item,i){
+    document.write(item+"</br>");
+})
+}
+func();
+        
+        
+         
+     </script>
+</body>
+</html>

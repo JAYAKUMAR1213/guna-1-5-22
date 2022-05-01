@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2 4 22 (1)</title>
+    <style>
+        .not
+        {
+            background-color: red;
+            color: white;
+        }
+        button
+        {
+            margin: 30px;
+            display: block;
+        }
+        *
+        {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="check">Hello</div>
+    <div class="check">Hello</div>
+    <div class="check">Hello</div>
+
+    <button type="button" class="btn">Good</button>
+    <button type="button" class="btn">Test</button>
+    <button type="button" class="not" onclick="x()">change</button>
+    <script>
+        var x =function()
+        { 
+        var one = document.getElementsByClassName('check')[2];
+        var first = one.innerHTML='hava nice day!!!';
+        console.log(first);
+    }
+    </script>
+</body>
+</html>

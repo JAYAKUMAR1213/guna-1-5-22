@@ -1,0 +1,18 @@
+input
+{
+    font-size: 30px;
+    margin-bottom: 50px;
+}
+.main_content
+{
+    margin: 50px;
+}
+.pre_inc_dis
+{
+    background-color: red;
+    margin-bottom: 50px;
+}
+.operators
+{
+    margin-bottom: 50px;
+}

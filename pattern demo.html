@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pattern demo</title>
+    <style>
+        .main_content
+        {
+            background-color: #ffc107;
+          text-align: center;
+        }
+    .heading 
+    {
+        display: inline-flex;
+        font-size: 100px;
+        color: aqua;   
+    }
+     .formm
+    {
+
+        color: green;
+        font-size: 25px;
+        display: inline-block;
+    }
+    .name,.submit
+    {
+        font-size: 22px;
+    }
+    .new3
+    {
+        color: rgb(136, 0, 255);
+    }
+    #male,#female
+    {
+        height: 20px;
+        width: 20px;
+    }
+    #tel
+    {
+        height: 25px;
+        width: 200px;
+    }
+    </style>
+</head>
+<body>
+    <div class="main_content">
+        <div class="heading">
+            <div class="star1" onclick="para(1)">&#x2606;</div>
+            <div class="star2"onclick="para(2)">&#x2606;</div>
+            <div class="star3"onclick="para(3)">&#x2606;</div>
+            <div class="star4"onclick="para(4)">&#x2606;</div>
+            <div class="star5"onclick="para(5)">&#x2606;</div>
+            <input type="text" name="" id="stars" hidden>
+        </div><br>
+        <div class="formm">
+        <label for="">NAME</label>&nbsp;&nbsp;<input type="text" placeholder="Enter the name" class="name"><br><br>
+        <span>MALE</span><input type="radio" name="gender" id="male" value="male">&nbsp;&nbsp;<span>FEMALE</span><input type="radio" name="gender" id="male" value="female"><br><br>
+        <label for="">PHONE</label>&nbsp;&nbsp;<input type="tel" name="telephone" id="tel"><br><br>
+        <input type="submit" value="SUBMIT" class="submit" onclick="submit()">
+        </div>
+    </div>
+    
+    <script>
+        var item;
+        //count = 4;
+        function para(item)
+        {
+        if (item == 1)
+        {        
+        for(i=0;i<item;i++)
+        {
+           var enter = document.getElementsByClassName("star"+(i+1))[0]
+            enter.classList.add("new3");
+        }
+        for(i=5;i>item;i--)
+        {
+           var enter1 = document.getElementsByClassName("star"+i)[0]
+            enter1.classList.remove("new3");
+        }
+        
+        }
+     else if (item == 2)
+        {        
+        for(i=0;i<item;i++)
+        {
+            var name1 = document.getElementsByClassName("star"+(i+1))[0]
+            name1.classList.add("new3");
+        }
+        for(i=5;i>item;i--)
+        {
+            var name2 = document.getElementsByClassName("star"+i)[0]
+            name2.classList.remove("new3");
+        }
+        }
+       else if (item == 3)
+        {        
+        for(i=0;i<item;i++)
+        {
+            var not= document.getElementsByClassName("star"+(i+1))[0]
+            not.classList.add("new3");
+        }
+        for(i=5;i>item;i--)
+        {
+            var not1= document.getElementsByClassName("star"+i)[0]
+            not1.classList.remove("new3");
+        }
+        }
+        else if (item == 4)
+        {        
+        for(i=0;i<item;i++)
+        {
+            var not= document.getElementsByClassName("star"+(i+1))[0]
+            not.classList.add("new3");
+        }
+        for(i=5;i>item;i--)
+        {
+            var not1= document.getElementsByClassName("star"+i)[0]
+            not1.classList.remove("new1");
+        }
+        }
+        else if (item == 5)
+        {        
+        for(i=0;i<item;i++)
+        {
+            var same= document.getElementsByClassName("star"+(i+1))[0]
+            same.classList.add("new3");
+        }
+        for(i=5;i>item;i--)
+        {
+            var same1= document.getElementsByClassName("star"+i)[0]
+            same1.classList.remove("new1");
+        }
+       
+        }
+            return item;
+
+    }
+          //submit function
+          
+          function submit()
+          
+          {
+            //var num5 = function para(item);  
+              var item =document.getElementsByClassName("star"+i)[0].value
+            num1 = document.getElementsByClassName("name")[0].value
+               num2= document.querySelector('input[name="gender"]:checked').value
+               num3 = document.getElementById("tel").value
+               var rating = document.getElementById("stars").value
+             //array call
+             var collection = [item,num1,num2,num3];
+            console.log(collection.push(rating);) 
+             alert(collection);
+              }
+            
+           
+    </script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24 4 22 demo2</title>
+
+    <!-- BOOTSTRAP LINK -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    
+    <style>
+        .card
+        {
+            width: 500px;
+            margin: auto;
+        }
+       #name,.name
+       {
+        font-size: 26px;
+        text-shadow: 2px 2px #c7bbc8e8;
+        font-weight: 800;
+        color: #a815c2f0;
+       }
+       .text-center 
+       {
+         text-align: center!important;
+        /* font-size: 30px; */
+       }
+       #radio
+       {
+         margin-left: 10px;
+       }
+       .redi
+       {
+        padding: 5px;
+        border: 1px solid #9f8f8f;
+       }
+       .content
+       {
+        margin: auto;
+        width: 511px;
+        border-radius: 50px;
+        box-shadow: 1px 10px 10px 20px;
+       }
+       .gender
+       {
+        padding: 3px;
+        border-radius: 40px;
+        border: 4px solid #c52c76;
+       }
+       body
+       {
+         background-image: url(../img/fish.jpg);
+         background-repeat: no-repeat;
+         background-size: 100% 110%;
+         overflow: hidden;
+       }
+       input
+       {
+        border-radius: 20px;
+       }
+       input:focus
+       {
+        background-color: #ffeb3b;
+        color: #e91e63;
+       }
+       #img1
+       {
+        padding: 5px;
+        width: 150px;
+       }
+    </style>
+ <script>
+  var object_new,collection = [],can=[];
+      //submit function
+       function save()
+       {
+         
+        var num1 = document.getElementById("firstname").value
+        var num2 = document.getElementById("surname").value
+        var num3 = document.getElementById("mnei").value
+        var num4 = document.getElementById("New password").value
+        var num5 = document.getElementById("date").value
+        var num6 = document.querySelector('input[name="gender"]:checked').value;
+        object_new = {'1':num1,'2':num2,'3':num3,'4':num4,'5':num5,'6':num6 }
+      // console.log(object_new);  
+       let i=(collection.length+1);
+       var n=i;
+      while(i == n)
+     {
+             collection[i] = object_new;
+             //console.log(collection);
+             i++;       
+     }
+     //console.log(collection);
+     var filtered = collection.filter(function (el) {
+  return el != null;
+});    can = JSON.stringify(filtered);
+     localStorage.setItem("nextpage",can);
+     can = JSON.parse(can);   
+    
+}
+    // window.open('file:///F:/class%20%20a/class%20b/front%20end%20class/html/demo.html');
+ 
+
+       // location.href="file:///F:/class%20%20a/class%20b/front%20end%20class/html/24%204%2022%20(assignment-3).html";
+        
+   // ====  var i=0;
+     // while(i == i)
+     // {
+     //         collection[i] = object_new;
+     //         i++;
+     // }
+        
+    
+         </script>
+</head>
+<body>
+  
+      <form onsubmit="second()" >
+
+        <h2   class="text-center "><img src="../img/homepage.jpg" alt="" id="img1" srcset=""></h2>
+        <div class="text-center content">
+         <img src="../img/icons8-user-24.png" alt="" srcset=""> &nbsp;<span class="name">welcome</span>  <span id="name"></span>
+              <div class="form-text">
+             <br><br>  <input type="text" class="text-center" name="firstname" id="firstname" placeholder="firstname" required>&nbsp;&nbsp;
+          <input type="text" class="text-center" name="surname" id="surname" placeholder="surname" required><br><br>
+          <input type="text" name="mnei" class="text-center" id="mnei" placeholder="Mobile Number and Email id" style="width: 400px;" required><br><br>
+          <input type="password" class="text-center" name="New Password" id="New password" placeholder="New password" style="width: 400px;" required><br><br>
+          <label style="margin-right: 50px;" class="name">date of bith &#63;</label>
+          <input type="date"  name="date" id="date" required><br><br>
+           <label style="font-size: 20px;margin-right: 30px;" class="name">Gender</label>&nbsp; 
+           <span class="gender">MALE <input type="radio" name="gender" id="male" value="male"></span>&nbsp;&nbsp;
+           <span class="gender">FEMALE <input type="radio" name="gender" id="male" value="female"></span>&nbsp;&nbsp;
+           <span class="gender">others <input type="radio" name="gender" id="male" value="others"></span><br><br>
+            <br>  
+           <input  type="submit" class="btn btn-outline-warning"  id="button1"value="submit">
+                             <!-- <button   onclick="submit()" class="btn btn-outline-success">submit</button>  -->
+                             <br> <br>
+                                
+                              </div>
+          </div>
+    
+      </form>
+      <button onclick="save()"> save</button>
+      <button onclick="save2()"> sav2</button>
+    
+</body>
+</html>

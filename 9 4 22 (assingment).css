@@ -1,0 +1,52 @@
+/* =========   main content ========== */
+
+.main_content
+{
+    background-image: linear-gradient(45deg, #12c988, transparent);
+    text-align: center;
+    transform: translate(0px, 60px);
+    width: 550px;
+    margin: auto;
+}
+
+/* ========== star content =========== */
+
+.heading 
+{
+display: inline-flex;
+font-size: 100px;
+color: aqua;   
+}
+
+/* ============ form content =========== */
+
+.formm
+{
+
+color: green;
+font-size: 25px;
+display: inline-block;
+}
+.name,.submit
+{
+font-size: 22px;
+}
+.new3
+{
+  color: #5f7b89;
+}
+#male,#female
+{
+height: 20px;
+width: 20px;
+}
+#tel
+{
+height: 40px;
+width: 280px;
+}
+#tel:focus,.name:focus
+{
+  background-color: #84ef80;
+  color: #4d17b8;
+}

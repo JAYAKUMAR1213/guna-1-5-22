@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3 4 22</title>
+    <style>
+        div
+    {
+        color: rgb(0, 128, 23);
+        font-size: 100px;
+        display: inline-block;
+    }
+    .new
+    {
+        color: red;
+    }
+    .name
+    {
+        color: rgb(0, 255, 191);
+    }
+    .new2
+    {
+        color: rgb(0, 17, 255);
+    }
+    .new3
+    {
+        color: red;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="star1" onclick="para(1)">&#x2606;</div>
+    <div class="star2"onclick="para(2)">&#x2606;</div>
+    <div class="star3"onclick="para(3)">&#x2606;</div>
+    <div class="star4"onclick="para(4)">&#x2606;</div>
+    <div class="star5"onclick="para(5)">&#x2606;</div>
+    <script>
+       
+        //count = 4;
+        function para(item)
+        {
+        if (item == 1)
+        {        
+        for(i=0;i<item;i++)
+        {
+           var enter = document.getElementsByClassName("star"+(i+1))[0]
+            enter.classList.add("new3");
+        }
+        for(i=5;i>item;i--)
+        {
+            var enter = document.getElementsByClassName("star"+(i))[0]
+            enter.classList.remove("new3"); 
+        }
+        }
+     else if (item == 2)
+        {        
+            for(i=0;i<item;i++)
+        {
+           var enter = document.getElementsByClassName("star"+(i+1))[0]
+            enter.classList.add("new3");
+        }
+        for(i=5;i>item;i--)
+        {
+            var enter = document.getElementsByClassName("star"+(i))[0]
+            enter.classList.remove("new3"); 
+        }
+        }
+       else if (item == 3)
+        {        
+            for(i=0;i<item;i++)
+        {
+           var enter = document.getElementsByClassName("star"+(i+1))[0]
+            enter.classList.add("new3");
+        }
+        for(i=5;i>item;i--)
+        {
+            var enter = document.getElementsByClassName("star"+(i))[0]
+            enter.classList.remove("new3"); 
+        }
+        }
+        else if (item == 4)
+        {        
+            for(i=0;i<item;i++)
+        {
+           var enter = document.getElementsByClassName("star"+(i+1))[0]
+            enter.classList.add("new3");
+        }
+        for(i=5;i>item;i--)
+        {
+            var enter = document.getElementsByClassName("star"+(i))[0]
+            enter.classList.remove("new3"); 
+        }
+        }
+        else if (item == 5)
+        {        
+            for(i=0;i<item;i++)
+        {
+           var enter = document.getElementsByClassName("star"+(i+1))[0]
+            enter.classList.add("new3");
+        }
+        for(i=5;i>item;i--)
+        {
+            var enter = document.getElementsByClassName("star"+(i))[0]
+            enter.classList.remove("new3"); 
+        }
+        }
+
+    }
+
+    </script>
+</body>
+</html>
